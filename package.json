@@ -1,0 +1,53 @@
+{
+  "name": "@techmely/monorepo",
+  "description": "Techmely Open Sources Communities Packages",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/techmely.git"
+  },
+  "workspaces": [
+    "design-pattern/*",
+    "web/**/*",
+    "web/*",
+    "vision-os/*",
+    "deployment/*"
+  ],
+  "scripts": {
+    "postinstall": "husky",
+    "lint": "biome lint",
+    "lint.format": "biome format --write",
+    "lint.check": "biome check",
+    "lint.types": "bun --filter \"*\" type-check",
+    "upgrade.deps": "npm-check-updates --dep dev,prod,peer -u"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "1.1.16",
+    "@types/node": "22.10.6",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "bun": "1.1.43",
+    "husky": "9.1.7",
+    "npm-check-updates": "17.1.13",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rimraf": "6.0.1",
+    "tslib": "^2.8.1",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ]
+}

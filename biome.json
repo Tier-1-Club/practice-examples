@@ -1,0 +1,51 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "recommended": true
+      },
+      "style": {
+        "recommended": true,
+        "noArguments": "off",
+        "noParameterAssign": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noConfusingVoidType": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "formatWithErrors": false,
+    "lineEnding": "crlf"
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "double"
+    }
+  },
+  "files": {
+    "include": [".vscode", "deployment", "design-pattern", "design-system", "vision-os", "web"],
+    "ignore": [
+      "node_modules",
+      "coverage",
+      "dist",
+      "**/node_modules",
+      "**/dist",
+      "partytown",
+      "**/d.ts",
+      ".vscode"
+    ]
+  }
+}
